@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./App.module.css";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Skills from "./components/Skills/Skills";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact/Contact";
+import { useRef } from "react";
 
-function App() {
+export default function Home() {
+  const HeroSection = useRef();
+  const SkillsSection = useRef();
+  const PortfolioSection = useRef();
+  const ContactSection = useRef();
+
+  const pages = {
+    home: HeroSection,
+    skills: SkillsSection,
+    portfolio: PortfolioSection,
+    contact: ContactSection,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.container}>
+      <main>
+        <Header pages={pages} />
+        <Hero ref={HeroSection} />
+        <Skills ref={SkillsSection} />
+        <Portfolio ref={PortfolioSection} />
+        <Contact ref={ContactSection} />
+      </main>
+
+      <footer className={styles.footer}>© Amr Hesham. 2022</footer>
     </div>
   );
 }
-
-export default App;

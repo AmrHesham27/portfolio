@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: auto;
+}
+.container .footer {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid rgb(222, 222, 222);
+}

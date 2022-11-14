@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .skills {
+    margin-top: 2rem;
+    font-size: 20px;
+    text-align: start;
+    padding-left: 10vw;
+  }
+}

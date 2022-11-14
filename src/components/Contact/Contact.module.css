@@ -1,0 +1,15 @@
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 8rem;
+}
+.container .line {
+  height: 12px;
+  width: 50px;
+  border-bottom: 1px solid rgb(133, 133, 133);
+  margin: 0 5px;
+}
